@@ -1,5 +1,7 @@
 # GCMPushNotificationServer
+*************************************************
 Server side code for GCM push notification in PHP
+*************************************************
 
 #php files and their role:
      1. db_functions.php: contains Database manipulation functions. Automatically connects to the default database upon object creation.
@@ -10,4 +12,5 @@ Server side code for GCM push notification in PHP
      6. unregister.php: unregisters an ID sent from android client app.
      7. config.php: database configuration.
      8. urls.php: Commonly used URLS.
-     9. commonutils.php: Commonly used functions
+     9. commonutils.php: Commonly used functions.
+     10. validator.php: Form Validation functions.
