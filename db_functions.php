@@ -97,7 +97,18 @@ class DB_Functions_GCM {
 
 	public function storeUser($name, $email, $gcm_regid) {
 		// insert user into database
+		if(($name=""||$name=null)&&($email=""||$email=null)) {
+		$result = mysqli_query($GLOBALS['mysqli_connection'], "INSERT INTO gcm_users(gcm_regid, created_at) VALUES('$gcm_regid', NOW())");
+		}
+	   if(($name=""||$name=null)&&($email!=""&&$email!=null)) {
+		$result = mysqli_query($GLOBALS['mysqli_connection'], "INSERT INTO gcm_users(email,gcm_regid, created_at) VALUES('$email','$gcm_regid', NOW())");
+		}
+		if(($name!=""&&$name!=null)&&($email=""||$email=null)) {
+		$result = mysqli_query($GLOBALS['mysqli_connection'], "INSERT INTO gcm_users(name,gcm_regid, created_at) VALUES('$name','$gcm_regid', NOW())");
+		}
+		if($name!=""&&$name!=null&&$email!=""&&$email!=null) {
 		$result = mysqli_query($GLOBALS['mysqli_connection'], "INSERT INTO gcm_users(name, email, gcm_regid, created_at) VALUES('$name', '$email', '$gcm_regid', NOW())");
+		}
 		// check for successful store
 		if ($result) {
 			// get user details

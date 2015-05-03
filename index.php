@@ -46,8 +46,8 @@
     <body>
  
         <?php
-		require_once 'db_functions_auth.php';
-		$db = new DB_Functions_Auth();
+		require_once 'db_functions.php';
+		$db = new DB_Functions_GCM();
 		$users = $db -> getAllUsers();
 		if ($users != false)
 			$no_of_users = mysqli_num_rows($users);
@@ -65,7 +65,7 @@
  
 <select name="dropdown">
   <option value="default" selected="selected">Default</option>
-  <option value="news">News</option>
+  <option value="type1">Type1</option>
 </select></fieldset>
 </div><br></br>
 <div><fieldset><legend>Notification Message</legend>
