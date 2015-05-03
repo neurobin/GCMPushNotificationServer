@@ -21,12 +21,11 @@
 				display: inline;
 				align-content: center;
 				border: 1px solid #095D92;
-				background-color: #DFF3FF;
 				width: 50%
 			}
 			legend {
 				font-size: 1.1em;
-				background-color: #095D92;
+				background-color: #707070;
 				color: #FFFFFF;
 				font-weight: bold;
 			}
