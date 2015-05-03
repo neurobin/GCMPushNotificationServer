@@ -10,4 +10,4 @@ Server side code for GCM push notification in PHP
      6. unregister.php: unregisters an ID sent from android client app.
      7. config.php: database configuration.
      8. urls.php: Commonly used URLS.
-     9.commonutils.php: Commonly used functions
+     9. commonutils.php: Commonly used functions
